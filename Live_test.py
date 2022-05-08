@@ -7,7 +7,7 @@ import MemoryGame_test
 import CurrencyRouletteGame_test
 
 
-class Liv e:
+class Live:
 
     def __init__(self):
         self.NAME = input('Please enter your name: ')
