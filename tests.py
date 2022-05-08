@@ -1,5 +1,5 @@
 count = 0
-len = 3
+length = 3
 list = []
 while True:
     try:
