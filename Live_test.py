@@ -5,7 +5,8 @@ this program is for getting inputs for WorldOfGames, includes name, game, diffic
 # from GuessGame_test import GuessGame
 # from MemoryGame_test import MemoryGame
 # from CurrencyRouletteGame_test import CurrencyRouletteGame
-
+# import Utils_test
+from Utils_test import Utils
 
 class Live:
 
@@ -21,48 +22,20 @@ class Live:
 
     # getting inputs for WorldOfGames
     def load_game(self):
-        while True:
-            try:
-                # game selection
-                self.GAME = int(input("""Our Games:
+        # game selection
+        print("""Our Games:
     1. Memory Game - a sequence of numbers will appear for 1 second and you have to guess it back
     2. Guess Game - guess a number and see if you choose like the computer
     3. Currency Roulette - try and guess the value of a random amount of USD in ILS
 
-    Please choose a game to play: """))
-            # check if entered numbers only
-            except ValueError:
-                print("""*********************************
-**  Please enter numbers only  **
-*********************************""")
-                continue
-            # check if entered numbers in valid range only
-            if not 1 <= self.GAME <= 3:
-                print("""*******************************************
-**  Please choose game from 1 to 3 only  **
-*******************************************""")
-                continue
-            else:
-                break
+    Please choose a game to play: """)
+        self.GAME = Utils.input_validator(4)
 
-        while True:
-            try:
-                # difficulty selection
-                self.DIFFICULTY = int(input('Please choose game difficulty from 1 to 5: '))
-            # check if entered numbers only
-            except ValueError:
-                print("""*********************************
-**  Please enter numbers only  **
-*********************************""")
-                continue
-            # check if entered numbers in valid range only
-            if not 1 <= self.DIFFICULTY <= 5:
-                print("""*************************************************
-**  Please choose difficulty from 1 to 5 only  **
-*************************************************""")
-                continue
-            else:
-                break
+        # difficulty selection
+        print('Please choose game difficulty from 1 to 5: ')
+        # check if entered numbers only
+        self.DIFFICULTY = Utils.input_validator(6)
+
         # settings in game difficulty for all games
         if self.DIFFICULTY == 1:
             self.GAME_DIFF = 3
