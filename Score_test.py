@@ -38,7 +38,7 @@ class Score:
 
 
 Score = Score()
-print(Score.add_score())
+Score.add_score()
 
 
 
