@@ -6,6 +6,7 @@ variable called difficulty . The game will get a number input from the
 from time import sleep
 import random
 from Live_test import *
+from Utils_test import Utils
 
 
 class GuessGame:
@@ -32,22 +33,28 @@ class GuessGame:
         print(f'Guess a number between {self.LOW} and {self.HIGH}')
 
         # get input guess number from user
-        while True:
-            try:
-                self.USER_NUMBER = int(input('Enter the guessed number: '))
-            except ValueError:
-                print("""*********************************
-**  Please enter numbers only  **
-*********************************""")
-                continue
-            # check if entered numbers in valid range only
-            if not self.LOW <= self.USER_NUMBER <= self.HIGH:
-                print(f'**********************************************\n'
-                      f'**  Please Guess a number between {self.LOW} and {self.HIGH}  **\n'
-                      f'**********************************************')
-                continue
-            else:
-                break
+        print('Enter the guessed number: ')
+        self.USER_NUMBER = Utils.input_check(self.HIGH)
+
+#         while True:
+#             try:
+#                 self.USER_NUMBER = int(input('Enter the guessed number: '))
+#             except ValueError:
+#                 print("""*********************************
+# **  Please enter numbers only  **
+# *********************************""")
+#                 '''
+#                 jokekn
+#                 '''
+#                 continue
+#             # check if entered numbers in valid range only
+#             if not self.LOW <= self.USER_NUMBER <= self.HIGH:
+#                 print(f'**********************************************\n'
+#                       f'**  Please Guess a number between {self.LOW} and {self.HIGH}  **\n'
+#                       f'**********************************************')
+#                 continue
+#             else:
+#                 break
         # compare random (secret) number to user input number
         if self.SECRET_NUMBER == self.USER_NUMBER:
             print(f'The computer number was: {self.SECRET_NUMBER}')
@@ -57,8 +64,4 @@ class GuessGame:
             print(f'Sorry, you Guessed incorrect, better luck next time')
 
 
-# playing the game
-# print(Live.welcome())
-# print(Live.load_game())
 # GuessGame = GuessGame()
-# GuessGame.play()
