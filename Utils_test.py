@@ -39,7 +39,4 @@ class Utils:
             else:
                 return input_number
 
-
-
 Utils = Utils()
-

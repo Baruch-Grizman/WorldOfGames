@@ -41,26 +41,6 @@ class MemoryGame:
                   f', as appeared before: ')
             self.GET_NUMBER = Utils.input_check(101)
             self.GET_LIST_FROM_USER.append(self.GET_NUMBER)
-        #         while True:
-#             try:
-#                 for i in range(Live.GAME_DIFF):
-#                     self.GET_NUMBER = int(input(f'\rplease enter {Live.GAME_DIFF} numbers from memory from 1 to 101'
-#                                                 f', as appeared before: '))
-#                     self.GET_LIST_FROM_USER.append(self.GET_NUMBER)
-#             except ValueError:
-#                 print("""*********************************
-# **  Please enter numbers only  **
-# *********************************""")
-#                 continue
-#             # check if entered numbers in valid range only
-#             # if 1 > self.GET_NUMBER or self.GET_NUMBER > 101:
-#             if not 1 <= self.GET_NUMBER <= 101:
-#                 print("""****************************************
-# **  Please choose from 1 to 101 only  **
-# ****************************************""")
-#                 continue
-#             else:
-#                 break
 
         print(f'Game Numbers: {self.GENERATE_SEQUENCE}')
         print(f'Your Numbers: {self.GET_LIST_FROM_USER}')
@@ -72,4 +52,3 @@ class MemoryGame:
             print('Sorry, your numbers are Not Equal, better luck next time')
 
 
-# MemoryGame = MemoryGame()

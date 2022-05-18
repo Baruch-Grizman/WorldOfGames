@@ -40,18 +40,7 @@ class CurrencyRouletteGame:
         self.GUESS_VALUE = Utils.input_check(1000)
         self.LOW = (self.CURRENCY - (18 - Live.GAME_DIFF))
         self.HIGH = (self.CURRENCY + (18 - Live.GAME_DIFF))
-#         while True:
-#             try:
-#                 self.GUESS_VALUE = int(input(f'\rplease guess the value of {self.RANDOM} USD in ILS: '))
-#                 self.LOW = (self.CURRENCY - (18 - Live.GAME_DIFF))
-#                 self.HIGH = (self.CURRENCY + (18 - Live.GAME_DIFF))
-#             except ValueError:
-#                 print("""*********************************
-# **  Please enter numbers only  **
-# *********************************""")
-#                 continue
-#             else:
-#                 break
+
         # check if guess value is in range
         if self.LOW <= self.GUESS_VALUE <= self.HIGH:
             print(f'The actual value of {self.RANDOM} USD in ILS is {self.CURRENCY}', end='')
@@ -61,4 +50,4 @@ class CurrencyRouletteGame:
             print("\nSorry, better luck next time.\n")
 
 
-# CurrencyRouletteGame = CurrencyRouletteGame()
+

@@ -2,10 +2,6 @@
 this program is for getting inputs for WorldOfGames, includes name, game, difficulty
 """
 
-# from GuessGame_test import GuessGame
-# from MemoryGame_test import MemoryGame
-# from CurrencyRouletteGame_test import CurrencyRouletteGame
-# import Utils_test
 from Utils_test import Utils
 
 
@@ -49,36 +45,7 @@ class Live:
         elif self.DIFFICULTY == 5:
             self.GAME_DIFF = 15
 
-        # # Launch game based on user selection
-        # if Live.GAME == 1:
-        #     MemoryGame = MemoryGame()
-        #     MemoryGame.play()
-        # elif Live.GAME == 2:
-        #     GuessGame = GuessGame()
-        #     GuessGame.play()
-        # elif Live.GAME == 3:
-        #     CurrencyRouletteGame = CurrencyRouletteGame()
-        #     CurrencyRouletteGame.play()
 
 
 Live = Live()
 
-
-#Live = Live()
-
-# # Launch game based on user selection
-# if Live.GAME == 1:
-#     MemoryGame = MemoryGame()
-#     MemoryGame.play()
-# elif Live.GAME == 2:
-#     GuessGame = GuessGame()
-#     GuessGame.play()
-# elif Live.GAME == 3:
-#     CurrencyRouletteGame = CurrencyRouletteGame()
-#     CurrencyRouletteGame.play()
-
-# print(Live.welcome())
-# print(Live.load_game())
-# print(Live.GAME)
-# print(Live.DIFFICULTY)
-# print(Live.GAME_DIFF)
