@@ -8,40 +8,38 @@ before a new game starts).
 """
 
 import os
-from time import sleep
 
 
 class Utils:
 
     def __init__(self):
-        self.SCORES_FILE_NAME = "Scores.txt"
+        self.SCORES_FILE_NAME = 'Scores.txt'
         self.BAD_RETURN_CODE = -1
-        self.VALID_RANGE = 0
 
     def screen_cleaner(self):
         return os.system('cls' if os.name == 'nt' else 'clear')
 
-    def input_validator(self, VALID_RANGE):
+    def input_check(self, high_range):
         while True:
             try:
                 # game selection
                 input_number = int(input())
             # check if entered numbers only
             except ValueError:
-                print("""*********************************
-        **  Please enter numbers only  **
-        *********************************""")
+                print(f'*********************************'
+                      f'\n**  Please enter numbers only  **'
+                      f'\n*********************************')
                 continue
             # check if entered numbers in valid range only
-            if not 1 <= input_number <= self.VALID_RANGE-1:
-                print(f'*******************************************'
-                      f'**  Please choose game from 1 to {self.VALID_RANGE-1} only  **'
-                      f'*******************************************')
+            if not 1 <= input_number <= high_range:
+                print(f'********************************************'
+                      f'\n**  Please choose game from 1 to {high_range} only  **'
+                      f'\n********************************************')
                 continue
             else:
-                break
+                return input_number
+
 
 
 Utils = Utils()
-# test.screen_cleaner()
 

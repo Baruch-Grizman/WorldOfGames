@@ -8,6 +8,7 @@ this program is for getting inputs for WorldOfGames, includes name, game, diffic
 # import Utils_test
 from Utils_test import Utils
 
+
 class Live:
 
     def __init__(self):
@@ -28,13 +29,13 @@ class Live:
     2. Guess Game - guess a number and see if you choose like the computer
     3. Currency Roulette - try and guess the value of a random amount of USD in ILS
 
-    Please choose a game to play: """)
-        self.GAME = Utils.input_validator(4)
+    Please choose a game number to play: """)
+        self.GAME = Utils.input_check(3)
 
         # difficulty selection
         print('Please choose game difficulty from 1 to 5: ')
         # check if entered numbers only
-        self.DIFFICULTY = Utils.input_validator(6)
+        self.DIFFICULTY = Utils.input_check(5)
 
         # settings in game difficulty for all games
         if self.DIFFICULTY == 1:
@@ -48,8 +49,22 @@ class Live:
         elif self.DIFFICULTY == 5:
             self.GAME_DIFF = 15
 
+        # # Launch game based on user selection
+        # if Live.GAME == 1:
+        #     MemoryGame = MemoryGame()
+        #     MemoryGame.play()
+        # elif Live.GAME == 2:
+        #     GuessGame = GuessGame()
+        #     GuessGame.play()
+        # elif Live.GAME == 3:
+        #     CurrencyRouletteGame = CurrencyRouletteGame()
+        #     CurrencyRouletteGame.play()
+
 
 Live = Live()
+
+
+#Live = Live()
 
 # # Launch game based on user selection
 # if Live.GAME == 1:
