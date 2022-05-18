@@ -13,22 +13,23 @@ Methods
 
 
 # from Live_test import *
+from Utils_test import Utils
 
 
 class Score:
 
     def __init__(self):
         # self.SCORE_DIFFICULTY = Live.DIFFICULTY
-        self.SCORE_DIFFICULTY = 1   # hardcoded for self testing
+        self.SCORE_DIFFICULTY = 2   # hardcoded for self testing
 
     def add_score(self):
         points_of_winning = (self.SCORE_DIFFICULTY*3)+5
         try:
             # try to open file, if not exist it will create a new one
-            with open('Scores.txt', encoding='utf-8') as score_file:
+            with open(Utils.SCORES_FILE_NAME, encoding='utf-8') as score_file:
                 for line in score_file.readlines():     # reading current score from file
                     points_of_winning += int(line)      # adding new points of winning to current score
-            with open('Scores.txt', 'w+', encoding='utf-8') as score_file:
+            with open(Utils.SCORES_FILE_NAME, 'w+', encoding='utf-8') as score_file:
                 score_file.write(f'{points_of_winning}')    # writing the new sum score to file
 
         except:
