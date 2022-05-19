@@ -25,9 +25,7 @@ class Score:
     def add_score(self):
         self.SCORE_DIFFICULTY = Live.DIFFICULTY
         points_of_winning = self.SCORE_DIFFICULTY*3+5
-        print(Live.DIFFICULTY)
-        print(self.SCORE_DIFFICULTY)
-        print(points_of_winning)
+
         try:
             # try to open file, if not exist it will create a new one
             with open(Utils.SCORES_FILE_NAME, encoding='utf-8') as score_file:

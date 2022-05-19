@@ -35,16 +35,15 @@ class Live:
 
         # settings in game difficulty for all games
         if self.DIFFICULTY == 1:
-            self.GAME_DIFF = 3
+            self.GAME_DIFF = self.DIFFICULTY*3
         elif self.DIFFICULTY == 2:
-            self.GAME_DIFF = 6
+            self.GAME_DIFF = self.DIFFICULTY*3
         elif self.DIFFICULTY == 3:
-            self.GAME_DIFF = 9
+            self.GAME_DIFF = self.DIFFICULTY*3
         elif self.DIFFICULTY == 4:
-            self.GAME_DIFF = 12
+            self.GAME_DIFF = self.DIFFICULTY*3
         elif self.DIFFICULTY == 5:
-            self.GAME_DIFF = 15
-
+            self.GAME_DIFF = self.DIFFICULTY*3
 
 
 Live = Live()
