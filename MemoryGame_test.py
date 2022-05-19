@@ -7,6 +7,7 @@ with all the numbers the user will win otherwise he will lose.
 from time import sleep
 import random
 from Live_test import *
+from Score_test import Score
 
 
 class MemoryGame:
@@ -48,6 +49,7 @@ class MemoryGame:
         # compare two lists if they are equal.
         if sorted(self.GENERATE_SEQUENCE) == sorted(self.GET_LIST_FROM_USER):
             print('Your numbers are Equal, good memory')
+            Score.add_score()
         else:
             print('Sorry, your numbers are Not Equal, better luck next time')
 

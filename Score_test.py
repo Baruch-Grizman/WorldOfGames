@@ -12,18 +12,22 @@ Methods
 """
 
 
-# from Live_test import *
+from Live_test import *
 from Utils_test import Utils
 
 
 class Score:
 
     def __init__(self):
-        # self.SCORE_DIFFICULTY = Live.DIFFICULTY
-        self.SCORE_DIFFICULTY = 2   # hardcoded for self testing
+        self.SCORE_DIFFICULTY = 0
+        # self.SCORE_DIFFICULTY = 2   # hardcoded for self testing
 
     def add_score(self):
-        points_of_winning = (self.SCORE_DIFFICULTY*3)+5
+        self.SCORE_DIFFICULTY = Live.DIFFICULTY
+        points_of_winning = self.SCORE_DIFFICULTY*3+5
+        print(Live.DIFFICULTY)
+        print(self.SCORE_DIFFICULTY)
+        print(points_of_winning)
         try:
             # try to open file, if not exist it will create a new one
             with open(Utils.SCORES_FILE_NAME, encoding='utf-8') as score_file:
@@ -39,7 +43,7 @@ class Score:
 
 
 Score = Score()
-Score.add_score()
+# Score.add_score()
 
 
 

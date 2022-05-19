@@ -7,6 +7,7 @@ from time import sleep
 import random
 from Live_test import *
 from Utils_test import Utils
+from Score_test import Score
 
 
 class GuessGame:
@@ -40,6 +41,7 @@ class GuessGame:
         if self.SECRET_NUMBER == self.USER_NUMBER:
             print(f'The computer number was: {self.SECRET_NUMBER}')
             print(f'You Guessed correctly, Very Good!')
+            Score.add_score()
         else:
             print(f'The computer number was: {self.SECRET_NUMBER}')
             print(f'Sorry, you Guessed incorrect, better luck next time')
