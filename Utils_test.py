@@ -32,11 +32,12 @@ class Utils:
                 continue
             # check if entered numbers in valid range only
             if not 1 <= input_number <= high_range:
-                print(f'********************************************'
-                      f'\n**  Please choose game from 1 to {high_range} only  **'
-                      f'\n********************************************')
+                print(f'**************************************'
+                      f'\n**  Please choose from 1 to {high_range} only  **'
+                      f'\n**************************************')
                 continue
             else:
                 return input_number
+
 
 Utils = Utils()

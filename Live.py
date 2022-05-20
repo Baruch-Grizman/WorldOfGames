@@ -2,6 +2,8 @@
 this program is for getting inputs for WorldOfGames, includes name, game, difficulty
 """
 
+from Utils import Utils
+
 
 class Live:
 
@@ -17,59 +19,31 @@ class Live:
 
     # getting inputs for WorldOfGames
     def load_game(self):
-        while True:
-            try:
-                # game selection
-                self.GAME = int(input("""Our Games:
+        # game selection
+        print("""Our Games:
     1. Memory Game - a sequence of numbers will appear for 1 second and you have to guess it back
     2. Guess Game - guess a number and see if you choose like the computer
     3. Currency Roulette - try and guess the value of a random amount of USD in ILS
 
-    Please choose a game to play: """))
-            # check if entered numbers only
-            except ValueError:
-                print("""*********************************
-**  Please enter numbers only  **
-*********************************""")
-                continue
-            # check if entered numbers in valid range only
-            if not 1 <= self.GAME <= 3:
-                print("""*******************************************
-**  Please choose game from 1 to 3 only  **
-*******************************************""")
-                continue
-            else:
-                break
+    Please choose a game number to play: """)
+        self.GAME = Utils.input_check(3)
 
-        while True:
-            try:
-                # difficulty selection
-                self.DIFFICULTY = int(input('Please choose game difficulty from 1 to 5: '))
-            # check if entered numbers only
-            except ValueError:
-                print("""*********************************
-**  Please enter numbers only  **
-*********************************""")
-                continue
-            # check if entered numbers in valid range only
-            if not 1 <= self.DIFFICULTY <= 5:
-                print("""*************************************************
-**  Please choose difficulty from 1 to 5 only  **
-*************************************************""")
-                continue
-            else:
-                break
+        # difficulty selection
+        print('Please choose game difficulty from 1 to 5: ')
+        # check if entered numbers only
+        self.DIFFICULTY = Utils.input_check(5)
+
         # settings in game difficulty for all games
         if self.DIFFICULTY == 1:
-            self.GAME_DIFF = 3
+            self.GAME_DIFF = self.DIFFICULTY*3
         elif self.DIFFICULTY == 2:
-            self.GAME_DIFF = 6
+            self.GAME_DIFF = self.DIFFICULTY*3
         elif self.DIFFICULTY == 3:
-            self.GAME_DIFF = 9
+            self.GAME_DIFF = self.DIFFICULTY*3
         elif self.DIFFICULTY == 4:
-            self.GAME_DIFF = 12
+            self.GAME_DIFF = self.DIFFICULTY*3
         elif self.DIFFICULTY == 5:
-            self.GAME_DIFF = 15
+            self.GAME_DIFF = self.DIFFICULTY*3
 
 
 Live = Live()

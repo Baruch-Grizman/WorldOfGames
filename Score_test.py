@@ -41,7 +41,3 @@ class Score:
 
 
 Score = Score()
-# Score.add_score()
-
-
-

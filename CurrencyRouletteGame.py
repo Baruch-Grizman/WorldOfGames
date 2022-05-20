@@ -8,6 +8,7 @@ from time import sleep
 import random
 from currency_converter import CurrencyConverter
 from Live import *
+from Score import Score
 
 
 class CurrencyRouletteGame:
@@ -36,22 +37,16 @@ class CurrencyRouletteGame:
         sleep(2)
 
         # get input guess number from user
-        while True:
-            try:
-                self.GUESS_VALUE = int(input(f'\rplease guess the value of {self.RANDOM} USD in ILS: '))
-                self.LOW = (self.CURRENCY - (18 - Live.GAME_DIFF))
-                self.HIGH = (self.CURRENCY + (18 - Live.GAME_DIFF))
-            except ValueError:
-                print("""*********************************
-**  Please enter numbers only  **
-*********************************""")
-                continue
-            else:
-                break
+        print(f'\rplease guess the value of {self.RANDOM} USD in ILS: ')
+        self.GUESS_VALUE = Utils.input_check(1000)
+        self.LOW = (self.CURRENCY - (18 - Live.GAME_DIFF))
+        self.HIGH = (self.CURRENCY + (18 - Live.GAME_DIFF))
+
         # check if guess value is in range
         if self.LOW <= self.GUESS_VALUE <= self.HIGH:
             print(f'The actual value of {self.RANDOM} USD in ILS is {self.CURRENCY}', end='')
             print("\nVery good, you are correct.\n")
+            Score.add_score()
         else:
             print(f'The actual value of {self.RANDOM} USD in ILS is {self.CURRENCY}', end='')
             print("\nSorry, better luck next time.\n")

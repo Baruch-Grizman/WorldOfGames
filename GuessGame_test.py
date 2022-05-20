@@ -46,4 +46,3 @@ class GuessGame:
             print(f'The computer number was: {self.SECRET_NUMBER}')
             print(f'Sorry, you Guessed incorrect, better luck next time')
 
-

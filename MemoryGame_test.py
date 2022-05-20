@@ -34,7 +34,7 @@ class MemoryGame:
         sleep(2)
         for num in self.GENERATE_SEQUENCE:
             print('\r', 'Try to remember this numbers --> ', num, sep='', end=' <--')
-            sleep(1)    # changed to 1 sec instead of 0.7
+            sleep(1.5)    # changed to 1.5 sec instead of 0.7
 
         # get input number from user
         for i in range(Live.GAME_DIFF):
@@ -52,5 +52,4 @@ class MemoryGame:
             Score.add_score()
         else:
             print('Sorry, your numbers are Not Equal, better luck next time')
-
 

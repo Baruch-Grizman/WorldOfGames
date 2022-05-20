@@ -7,6 +7,7 @@ with all the numbers the user will win otherwise he will lose.
 from time import sleep
 import random
 from Live import *
+from Score import Score
 
 
 class MemoryGame:
@@ -33,28 +34,14 @@ class MemoryGame:
         sleep(2)
         for num in self.GENERATE_SEQUENCE:
             print('\r', 'Try to remember this numbers --> ', num, sep='', end=' <--')
-            sleep(1)    # changed to 1 sec instead of 0.7
+            sleep(1.5)    # changed to 1.5 sec instead of 0.7
 
         # get input number from user
-        while True:
-            try:
-                for i in range(Live.GAME_DIFF):
-                    self.GET_NUMBER = int(input(f'\rplease enter {Live.GAME_DIFF} numbers from memory from 1 to 101'
-                                                f', as appeared before: '))
-                    self.GET_LIST_FROM_USER.append(self.GET_NUMBER)
-            except ValueError:
-                print("""*********************************
-**  Please enter numbers only  **
-*********************************""")
-                continue
-            # check if entered numbers in valid range only
-            if not 1 <= self.GET_NUMBER <= 101:
-                print("""****************************************
-**  Please choose from 1 to 101 only  **
-****************************************""")
-                continue
-            else:
-                break
+        for i in range(Live.GAME_DIFF):
+            print(f'\rplease enter {Live.GAME_DIFF} numbers from memory from 1 to 101'
+                  f', as appeared before: ')
+            self.GET_NUMBER = Utils.input_check(101)
+            self.GET_LIST_FROM_USER.append(self.GET_NUMBER)
 
         print(f'Game Numbers: {self.GENERATE_SEQUENCE}')
         print(f'Your Numbers: {self.GET_LIST_FROM_USER}')
@@ -62,5 +49,7 @@ class MemoryGame:
         # compare two lists if they are equal.
         if sorted(self.GENERATE_SEQUENCE) == sorted(self.GET_LIST_FROM_USER):
             print('Your numbers are Equal, good memory')
+            Score.add_score()
         else:
             print('Sorry, your numbers are Not Equal, better luck next time')
+

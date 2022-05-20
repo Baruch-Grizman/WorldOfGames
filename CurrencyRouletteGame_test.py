@@ -52,4 +52,3 @@ class CurrencyRouletteGame:
             print("\nSorry, better luck next time.\n")
 
 
-
