@@ -14,7 +14,7 @@ class Utils:
 
     def __init__(self):
         self.SCORES_FILE_NAME = 'Scores.txt'
-        self.BAD_RETURN_CODE = -1
+        self.BAD_RETURN_CODE = "-1: Score file is unreachable"
 
     def screen_cleaner(self):
         return os.system('cls' if os.name == 'nt' else 'clear')
