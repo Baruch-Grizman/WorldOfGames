@@ -6,7 +6,7 @@ variable called difficulty . The game will get a number input from the
 from time import sleep
 import random
 from Live import *
-from Utils import Utils
+from data.Utils import Utils
 from Score import Score
 
 

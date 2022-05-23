@@ -13,7 +13,7 @@ Methods
 
 
 from Live import *
-from Utils import Utils
+from data.Utils import Utils
 
 
 class Score:

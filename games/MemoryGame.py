@@ -28,7 +28,7 @@ class MemoryGame:
         gen_list = self.random_numbers()
         self.GENERATE_SEQUENCE.extend(gen_list)
         print(f'{Live.NAME} Welcome to Memory Game - a sequence of numbers will'
-              f' appear for 1 second and you have to guess it back')
+              f' appear for 1.5 second and you have to guess it back')
         sleep(3)
         print('Get ready to play')
         sleep(2)

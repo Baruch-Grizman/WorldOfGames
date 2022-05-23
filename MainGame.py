@@ -3,10 +3,10 @@ The purpose of this file is to call the functions from Live.py
 """
 
 from Live import *
-from GuessGame import GuessGame
-from MemoryGame import MemoryGame
-from CurrencyRouletteGame import CurrencyRouletteGame
-from Utils import Utils
+from games.GuessGame import GuessGame
+from games.MemoryGame import MemoryGame
+from games.CurrencyRouletteGame import CurrencyRouletteGame
+from data.Utils import Utils
 
 # call the functions from Live.py
 print(Live.welcome())

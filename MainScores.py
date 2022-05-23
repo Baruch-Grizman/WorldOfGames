@@ -4,7 +4,7 @@ HTML. This will be done by using python’s flask library.
 """
 
 from flask import Flask, render_template
-from Utils import Utils
+from data.Utils import Utils
 
 app = Flask('MainScores')
 
