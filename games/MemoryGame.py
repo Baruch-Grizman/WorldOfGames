@@ -7,7 +7,7 @@ with all the numbers the user will win otherwise he will lose.
 from time import sleep
 import random
 from Live import *
-from Score import Score
+from data.Score import Score
 
 
 class MemoryGame:

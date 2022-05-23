@@ -7,7 +7,7 @@ from time import sleep
 import random
 from Live import *
 from data.Utils import Utils
-from Score import Score
+from data.Score import Score
 
 
 class GuessGame:
