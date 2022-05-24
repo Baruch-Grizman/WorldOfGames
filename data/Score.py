@@ -15,7 +15,6 @@ class Score:
 
     def __init__(self):
         self.SCORE_DIFFICULTY = 0
-        # self.SCORE_DIFFICULTY = 2   # hardcoded for self testing
 
     def add_score(self):
         self.SCORE_DIFFICULTY = Live.DIFFICULTY

@@ -13,7 +13,7 @@ import os
 class Utils:
 
     def __init__(self):
-        self.SCORES_FILE_NAME = 'Scores.txt'
+        self.SCORES_FILE_NAME = os.path.abspath('data/Scores.txt')
         self.BAD_RETURN_CODE = "-1: Score file is unreachable"
 
     # Function to clear the screen when starting a new game
