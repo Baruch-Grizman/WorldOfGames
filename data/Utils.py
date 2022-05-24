@@ -1,10 +1,10 @@
 """
-A general purpose python file. This file will contain general information and operations we need
-for our game.
-1. SCORES_FILE_NAME - A string representing a file name. By default “Scores.txt”
-2. BAD_RETURN_CODE - A number representing a bad return code for a function.
-3. Screen_cleaner - A function to clear the screen (useful when playing memory game or
-before a new game starts).
+This file contains variables and functions for general project use.
+SCORES_FILE_NAME - A string representing “Scores.txt” file name. Used in the Score.py and MainScores.py files.
+BAD_RETURN_CODE - A value that represents an error in case of a function error, Used in MainScores.py file.
+screen_cleaner - Function to clear the screen when starting a new game.
+input_check - Function that checks whether the inserted characters are only numbers,
+and whether they are in the correct range, depending on the requirement in the various files.
 """
 
 import os
@@ -16,9 +16,12 @@ class Utils:
         self.SCORES_FILE_NAME = 'Scores.txt'
         self.BAD_RETURN_CODE = "-1: Score file is unreachable"
 
+    # Function to clear the screen when starting a new game
     def screen_cleaner(self):
         return os.system('cls' if os.name == 'nt' else 'clear')
 
+    # Function that checks whether the inserted characters are only numbers,
+    # and whether they are in the correct range, depending on the requirement in the various files.
     def input_check(self, high_range):
         while True:
             try:
