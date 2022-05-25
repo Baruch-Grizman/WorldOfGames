@@ -1,7 +1,8 @@
 # Welcome to World of Games (WoG)
 
 This project is part of **DevOps Course** at DevOps-Experts.\
-The purpose of the project is to allow the user to play three different games.  All code is written using **Python**, while using **FLASK** and **HTML** for page creation and publishing.\
+The purpose of the project is to allow the user to play three different games.\
+All code is written using **Python**, while using **FLASK** and **HTML** for page creation and publishing.\
 Version control is managed in **GIT**
 
 ## Project Description
